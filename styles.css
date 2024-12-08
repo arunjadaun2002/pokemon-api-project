@@ -1,8 +1,12 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+    background-color: #2e2222;
     margin: 0;
     padding: 0;
+    
+
+    
+   
 }
 
 header {
@@ -30,8 +34,33 @@ header {
 }
 
 .pokemon-item {
-    background-color: #fff;
+    background-color: #e4dcdc;
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.corner-logo{
+    position: fixed;
+   
+    top: 29px;
+    right: 10px;
+    overflow: hidden;
+    background-color: #ffcc00;
+
+    border-radius: 50px;
+    height: 80px;
+    width: 80px;
+
+}
+
+.corner-logo img{
+    object-fit:cover;
+    
+    height: 100%;
+    width: 100%;
+    
+   
+    
+
+   
 }

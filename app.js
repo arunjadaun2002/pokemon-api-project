@@ -1,55 +1,55 @@
-// Declare the variables
-const pokemonList = document.getElementById('pokemon-list');  // The element where the Pokémon will be displayed
-const searchBar = document.getElementById('search-bar');  // The search input field
-const searchBtn = document.getElementById('search-btn');  // The search button
 
-let pokemons = [];  // Array to hold the fetched Pokémon data
+const pokemonList = document.getElementById('pokemon-list');  
+const searchBar = document.getElementById('search-bar'); 
+const searchBtn = document.getElementById('search-btn');  
 
-// Function to fetch Pokémon data from the API
+let pokemons = [];  
+
+
 async function fetchPokemons() {
     try {
-        const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=50');  // Fetch the first 50 Pokémon
+        const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=50'); 
         if (!response.ok) throw new Error('Failed to load Pokémon data.');
         
         const data = await response.json();
-        pokemons = data.results;  // Store the fetched Pokémon data
-        displayPokemons(pokemons);  // Display the Pokémon
+        pokemons = data.results;  
+        displayPokemons(pokemons); 
     } catch (error) {
         pokemonList.innerHTML = `<p class="error">Error: ${error.message}</p>`;
     }
 }
 
-// Function to display Pokémon in the list
+
 function displayPokemons(pokemonArray) {
-    pokemonList.innerHTML = '';  // Clear any previous Pokémon displayed
+    pokemonList.innerHTML = '';  
     
     pokemonArray.forEach(pokemon => {
-        const pokemonItem = document.createElement('div');  // Create a new div for each Pokémon
-        pokemonItem.classList.add('pokemon-item');  // Add a class for styling
-        pokemonItem.innerText = pokemon.name;  // Set the Pokémon name as the text
-        pokemonList.appendChild(pokemonItem);  // Append to the list
+        const pokemonItem = document.createElement('div');  
+        pokemonItem.classList.add('pokemon-item');  
+        pokemonItem.innerText = pokemon.name;  
+        pokemonList.appendChild(pokemonItem); 
     });
 }
 
-// Function to handle the search functionality
+
 function searchPokemon() {
-    const query = searchBar.value.trim().toLowerCase();  // Get the search query and remove extra spaces
+    const query = searchBar.value.trim().toLowerCase();  
     if (!query) {
         alert("Please enter a Pokémon name.");
-        return;  // If the query is empty, do nothing
+        return;  
     }
 
-    const filteredPokemons = pokemons.filter(pokemon => pokemon.name.toLowerCase().includes(query));  // Filter Pokémon by name
+    const filteredPokemons = pokemons.filter(pokemon => pokemon.name.toLowerCase().includes(query));
     
     if (filteredPokemons.length === 0) {
         pokemonList.innerHTML = '<p class="error">Pokémon not found.</p>';
     } else {
-        displayPokemons(filteredPokemons);  // Display the filtered list
+        displayPokemons(filteredPokemons); 
     }
 }
 
-// Event listener for the search button
+
 searchBtn.addEventListener('click', searchPokemon);
 
-// Fetch Pokémon data when the page loads
+
 fetchPokemons();
