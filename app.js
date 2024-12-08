@@ -33,13 +33,13 @@ function displayPokemons(pokemonArray) {
 
 
 function searchPokemon() {
-    const query = searchBar.value.trim().toLowerCase();  
-    if (!query) {
+    const data = searchBar.value.trim();
+    if (!data) {
         alert("Please enter a Pokémon name.");
         return;  
     }
 
-    const filteredPokemons = pokemons.filter(pokemon => pokemon.name.toLowerCase().includes(query));
+    const filteredPokemons = pokemons.filter(pokemon => pokemon.name.includes(data));
     
     if (filteredPokemons.length === 0) {
         pokemonList.innerHTML = '<p class="error">Pokémon not found.</p>';
