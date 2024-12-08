@@ -27,6 +27,8 @@ External Resources Used
 1-PokeAPI v2 Documentation
 2-CSS Tricks
 
+![image alt](https://github.com/arunjadaun2002/pokemon-api-project/blob/main/Screenshot%20(550).png?raw=true)
+
 
 
 
