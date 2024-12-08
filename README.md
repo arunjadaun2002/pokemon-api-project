@@ -1,7 +1,7 @@
-# pokemon-api-project
+# Pokemon-API-Project
 
 ****************************
-THIS WEBSITE IS LIVE ON AWS (TO ACCESS)== https://pokemonwebsite.s3.eu-north-1.amazonaws.com/pokemon-api-project/index.html
+THIS WEBSITE IS LIVE (TO ACCESS)== https://pokemonwebsite.s3.eu-north-1.amazonaws.com/pokemon-api-project/index.html
 ****************************
 The pokemon finder is a simple web application that allow to user:
 1-View the first 50 pokemon name's fetched from the API.
