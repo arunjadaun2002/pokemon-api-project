@@ -42,20 +42,20 @@ header {
 .corner-logo{
     position: fixed;
    
-    top: 29px;
+    top: 9px;
     right: 10px;
     overflow: hidden;
     background-color: #ffcc00;
 
     border-radius: 50px;
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
 
 }
 
 .corner-logo img{
     object-fit:cover;
-    
+
     height: 100%;
     width: 100%;
     
