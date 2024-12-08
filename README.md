@@ -29,6 +29,7 @@ External Resources Used
 
 ![image alt](https://github.com/arunjadaun2002/pokemon-api-project/blob/main/Screenshot%20(550).png?raw=true)
 ![image alt](https://github.com/arunjadaun2002/pokemon-api-project/blob/main/Screenshot%20(552).png?raw=true)
+![image alt](https://github.com/arunjadaun2002/pokemon-api-project/blob/main/Screenshot%20(551).png?raw=true)
 
 
 
